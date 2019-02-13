@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Marcadores Plano GPS</name>
+    <description/>
+    <Style id="icon1547-0097A7-labelson">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>http://sistema.mdm-auditores.com/mapas/pines/gopat_pin_violeta.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon1547-0097A7-labelson-nodesc">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>http://sistema.mdm-auditores.com/mapas/pines/gopat_pin_violeta.png</href>
+        </Icon>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon1547-FFD600-labelson">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>http://sistema.mdm-auditores.com/mapas/pines/gopat_pin_naranja.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Avenida de Mayo</name>
+      <Placemark>
+        <name>Casa de Gobierno Nacional (Casa Rosada)
+</name>
+        <description>Balcarce 50; 1884 (unión de palacio de gobierno y edificio de correo)	; 1889</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3703184,-34.6081818,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio La Prensa (Casa de la Cultura)
+</name>
+        <description>; Avenida de Mayo 575	; 1892	; 1898</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3744758,-34.6082392,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pasaje Roverano
+</name>
+        <description>; Avenida de Mayo 560	; 1878	;</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3743203,-34.6087867,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sala Española de Comercio (Club Español)
+</name>
+        <description>; Bernardo de Irigoyen 172/178	; 1907	; 1912</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.380355,-34.610332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hotel Chile
+</name>
+        <description>; Avenida de Mayo 1297	; 1904	; 1906</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3847381,-34.6091277,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hotel Majestic
+</name>
+        <description>; Avenida de Mayo 1317	; 1905	; 1909</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3851033,-34.6091295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palacio Barolo
+</name>
+        <description>; Avenida de Mayo 1370	; 1915	; 1923</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3857581,-34.609653,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio de la Inmobiliaria
+</name>
+        <description>; Avenida de Mayo 1402/1500	; 1908	; 1910</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3863396,-34.609536,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Confitería del Molino
+</name>
+        <description>; Avenida Rivadavia 1810	; 1915	; 1917</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.392075,-34.6090847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plaza del Congreso
+</name>
+        <description>; 	; 1908	; 1910</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3914381,-34.6097492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Monumento a los Dos Congresos
+</name>
+        <description>; Plaza del Congreso	; 	; 1914</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3909982,-34.6097448,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estaciones de subterráneo Línea A
+</name>
+        <description>; Entre estaciones Plaza de Mayo y Primera Junta	; 1911	; 1913</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3706081,-34.6087095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palacio del Congreso Nacional
+</name>
+        <description>; 	; 1898	; 1906</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3927658,-34.6098508,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palacio del Correo Central (CCK)
+</name>
+        <description>; Sarmiento 151	; 1889	; 1928</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3694973,-34.6036589,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio de la Aduana
+</name>
+        <description>; Azopardo 350	; 1909	; 1910</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3674476,-34.6117834,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oficinas de Ajustes del Ferrocarril (Railway Building)
+</name>
+        <description>; Paseo Colón 350	; 1907	; 1910/1914</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3688004,-34.6117103,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Monumento de Siria a la Argentina
+</name>
+        <description>; Plaza República del Paraguay	; 	;</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3983989,-34.5891193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plaza de Mayo
+</name>
+        <description>; 	; cual reforma?	;</description>
+        <styleUrl>#icon1547-FFD600-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3722174,-34.6083629,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Av. Roque Sáenz Peña (Diagonal Norte)</name>
+      <Placemark>
+        <name>Avenida Presidente Roque Sáenz Peña</name>
+        <description>1913</description>
+        <styleUrl>#icon1547-0097A7-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3785987,-34.605264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plaza Lavalle</name>
+        <styleUrl>#icon1547-0097A7-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.384511,-34.6020577,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Teatro Colón</name>
+        <description>1889	1908</description>
+        <styleUrl>#icon1547-0097A7-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3831051,-34.6010475,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Teatro Nacional Cervantes</name>
+        <description>Libertad 815;	1918;	1921</description>
+        <styleUrl>#icon1547-0097A7-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.383538,-34.599028,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palacio de Justicia de la Nación</name>
+        <description>1902;	1942</description>
+        <styleUrl>#icon1547-0097A7-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3862369,-34.6019621,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escuela Presidente Roca</name>
+        <description>Libertad 581;		1903</description>
+        <styleUrl>#icon1547-0097A7-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3836886,-34.6017003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

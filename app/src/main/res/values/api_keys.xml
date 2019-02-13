@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Insertar aqui la clave de API del GCBA
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyDo4fJ9PYNecPlwKj6Rnc6obvpl3bJqpKc
+    </string>
+</resources>

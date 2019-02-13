@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Buenos Aires Patrimonio</string>
+    <string name="gcba">Gobierno de la Ciudad de Buenos Aires</string>
+    <string name="logo_gopat">Logo de la Gerencia Operatica de Patrimonio</string>
+    <string name="welcome_bienvenido">Bienvenido</string>
+    <string name="welcome_entrar">ENTRAR</string>
+    <string name="welcome_img_fondo">Imagen de Fondo</string>
+    <string name="txt_ejemplo">Ejemplo</string>
+    <string name="MenuMapas_Titulo">Elegir mapa para navegar:</string>
+    <string name="felchas">flechas_menu</string>
+    <string name="MenuBares_Titulo">Elegir un Bar de la lista:</string>
+    <string name="VrViewer_Tilulo">Titulo Mirador</string>
+    <string name="VrViewer_Info">Informacion del Mirador</string>
+    <string name="Mapa_Transparencia">Transparencia del Mapa</string>
+
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+</resources>
