@@ -113,15 +113,15 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BAIRES, 16));
         mTransparencyBar.setOnSeekBarChangeListener(this);
         mMap.setContentDescription("Mapa de Buenos Aires Antiguo.");
-        KmlLayer layer;
-        try {
-            layer = new KmlLayer(mMap, R.raw.doc, getApplicationContext());
-            layer.addLayerToMap();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        KmlLayer layer;
+//        try {
+//            layer = new KmlLayer(mMap, R.raw.doc, getApplicationContext());
+//            layer.addLayerToMap();
+//        } catch (XmlPullParserException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
