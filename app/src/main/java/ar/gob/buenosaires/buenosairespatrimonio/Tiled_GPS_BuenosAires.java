@@ -25,11 +25,11 @@ import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 import com.google.android.gms.maps.model.TileProvider;
 import com.google.android.gms.maps.model.UrlTileProvider;
-import com.google.maps.android.data.kml.KmlLayer;
+//import com.google.maps.android.data.kml.KmlLayer;
 
-import org.xmlpull.v1.XmlPullParserException;
+//import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Locale;
