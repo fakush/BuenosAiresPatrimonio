@@ -78,22 +78,23 @@ public class VrViewer extends AppCompatActivity {
 
     }
 
-//    @Override
-//    void onPause() {
-//        mVRPanoramaView.pauseRendering();
-//        super.onPause();
-//    }
-//
-//    @Override
-//    void onResume() {
-//        mVRPanoramaView.resumeRendering();
-//        super.onResume();
-//    }
-//
-//    @Override
-//    void onDestroy() {
-//        super.onDestroy();
-//        mVRPanoramaView.shutdown();
-//    }
+    @Override
+    protected void onPause() {
+        mVRPanoramaView.pauseRendering();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        mVRPanoramaView.resumeRendering();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mVRPanoramaView.shutdown();
+
+    }
 }
 
