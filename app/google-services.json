@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "135365297492",
+    "firebase_url": "https://bsaspatrimonio.firebaseio.com",
+    "project_id": "bsaspatrimonio",
+    "storage_bucket": "bsaspatrimonio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135365297492:android:5bb311a1bf199850",
+        "android_client_info": {
+          "package_name": "ar.gob.buenosaires.buenosairespatrimonio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135365297492-jtt0boen8mk4leu03orq4loav04ftho7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.gob.buenosaires.buenosairespatrimonio",
+            "certificate_hash": "4fa153ac5a5d39ecdf6ce2b0dfc610cf016e0ab3"
+          }
+        },
+        {
+          "client_id": "135365297492-klfdug56423rvacorr6ndje1stkmmgcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7wHplLZrtUGw9GrlBHXFATF7qFy6WQvY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135365297492-klfdug56423rvacorr6ndje1stkmmgcq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
