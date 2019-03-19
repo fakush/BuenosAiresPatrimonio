@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class FichaBar extends AppCompatActivity {
 
     @Override
@@ -19,19 +21,23 @@ public class FichaBar extends AppCompatActivity {
         String TxtBarrio = intent.getExtras().getString("Barrio");
         String TxtTelefono = intent.getExtras().getString("Telefono");
         String TxtDescripcion = intent.getExtras().getString("Descripcion");
-        String TxtFoto = intent.getExtras().getString("Foto");
+        String urlFoto = "gs://bsaspatrimonio.appspot.com/bares-headers/"+intent.getExtras().getString("Foto")+"_2.png";
+
 
         TextView Nombre = (TextView) findViewById(R.id.Bar_Nombre);
         TextView Direccion = (TextView) findViewById(R.id.BarDireccion);
         TextView Barrio = (TextView) findViewById(R.id.BarBarrio);
         TextView Telefono = (TextView) findViewById(R.id.BarTelefono);
         TextView Descripcion = (TextView) findViewById(R.id.BarDescripcion);
-        ImageView Foto = (ImageView) findViewById(R.id.FotoBar);
+        ImageView Foto = (ImageView) findViewById(R.id.Bar_Foto);
 
         Nombre.setText(TxtNombre.toString());
         Direccion.setText(TxtDireccion.toString());
         Barrio.setText(TxtBarrio.toString());
         Telefono.setText(TxtTelefono.toString());
         Descripcion.setText(TxtDescripcion.toString());
+        Glide.with(FichaBar.this).load(urlFoto).into(Foto);
+        String test = "r";
+
     }
 }

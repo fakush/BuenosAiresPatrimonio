@@ -45,7 +45,7 @@ public class MenuBares extends AppCompatActivity {
             sched.setBarrio(Separado[2]);
             sched.setTelefono(Separado[3]);
             sched.setDescripcion(Separado[4]);
-//            sched.setFoto(Separado[5]);
+            sched.setFoto(Separado[5]);
             bares_array.add(sched);
         }
     }
@@ -59,7 +59,7 @@ public class MenuBares extends AppCompatActivity {
         myInt.putExtra("Barrio", tempValues.getBarrio().toString());
         myInt.putExtra("Telefono", tempValues.getTelefono().toString());
         myInt.putExtra("Descripcion", tempValues.getDescripcion().toString());
-//        myInt.putExtra("Foto", tempValues.getFoto().toString());
+        myInt.putExtra("Foto", tempValues.getFoto().toString());
         startActivity(myInt);
     }
 }
