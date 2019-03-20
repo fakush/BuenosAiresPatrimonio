@@ -37,7 +37,6 @@ public class FichaBar extends AppCompatActivity {
         Telefono.setText(TxtTelefono.toString());
         Descripcion.setText(TxtDescripcion.toString());
         Glide.with(FichaBar.this).load(urlFoto).into(Foto);
-        String test = "r";
 
     }
 }
