@@ -31,12 +31,12 @@ public class FichaBar extends AppCompatActivity {
         TextView Descripcion = (TextView) findViewById(R.id.BarDescripcion);
         ImageView Foto = (ImageView) findViewById(R.id.Bar_Foto);
 
+        Glide.with(FichaBar.this).load(urlFoto).into(Foto);
         Nombre.setText(TxtNombre.toString());
         Direccion.setText(TxtDireccion.toString());
         Barrio.setText(TxtBarrio.toString());
         Telefono.setText(TxtTelefono.toString());
         Descripcion.setText(TxtDescripcion.toString());
-        Glide.with(FichaBar.this).load(urlFoto).into(Foto);
 
     }
 }
