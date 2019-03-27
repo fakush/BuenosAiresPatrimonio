@@ -1,12 +1,12 @@
 package ar.gob.buenosaires.buenosairespatrimonio;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.Target;
 
 public class FichaBar extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class FichaBar extends AppCompatActivity {
         Barrio.setText(TxtBarrio.toString());
         Telefono.setText(TxtTelefono.toString());
         Descripcion.setText(TxtDescripcion.toString());
-        Glide.with(FichaBar.this).load(urlFoto).into(Foto);
+        GlideApp.with(FichaBar.this).load(urlFoto).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(Foto);
 
     }
 }

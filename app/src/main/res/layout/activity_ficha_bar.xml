@@ -22,14 +22,15 @@
 
     <ImageView
         android:id="@+id/Bar_Foto"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bar_Nombre"
-        app:srcCompat="@drawable/bar_sur" />
+        app:layout_constraintTop_toBottomOf="@+id/Bar_Nombre" />
 
     <TextView
         android:id="@+id/BarDireccion"
