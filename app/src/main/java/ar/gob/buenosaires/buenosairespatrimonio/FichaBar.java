@@ -43,7 +43,14 @@ public class FichaBar extends AppCompatActivity {
         StorageReference storageRef = storage.getReference();
         StorageReference pathReference = storageRef.child("bares-headers/"+urlFoto);
 
-
+//        Glide.with(context.getApplicationContext())
+//                .load(Your Path)   //passing your url to load image.
+//                .override(18, 18)  //just set override like this
+//                .error(R.drawable.placeholder)
+//                .listener(glide_callback)
+//                .animate(R.anim.rotate_backward)
+//                .centerCrop()
+//                .into(image.score);
 
         GlideApp.with(FichaBar.this).load(pathReference).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(Foto);
 
