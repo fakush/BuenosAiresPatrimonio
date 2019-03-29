@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.request.target.Target;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class FichaBar extends AppCompatActivity {
 
@@ -21,22 +23,29 @@ public class FichaBar extends AppCompatActivity {
         String TxtBarrio = intent.getExtras().getString("Barrio");
         String TxtTelefono = intent.getExtras().getString("Telefono");
         String TxtDescripcion = intent.getExtras().getString("Descripcion");
-        String urlFoto = "gs://bsaspatrimonio.appspot.com/bares-headers/"+intent.getExtras().getString("Foto")+"_2.png";
+        String urlFoto = intent.getExtras().getString("Foto")+"_2.png";
 
 
-        TextView Nombre = (TextView) findViewById(R.id.Bar_Nombre);
-        TextView Direccion = (TextView) findViewById(R.id.BarDireccion);
-        TextView Barrio = (TextView) findViewById(R.id.BarBarrio);
-        TextView Telefono = (TextView) findViewById(R.id.BarTelefono);
-        TextView Descripcion = (TextView) findViewById(R.id.BarDescripcion);
-        ImageView Foto = (ImageView) findViewById(R.id.Bar_Foto);
+        TextView Nombre = findViewById(R.id.Bar_Nombre);
+        TextView Direccion = findViewById(R.id.BarDireccion);
+        TextView Barrio = findViewById(R.id.BarBarrio);
+        TextView Telefono = findViewById(R.id.BarTelefono);
+        TextView Descripcion = findViewById(R.id.BarDescripcion);
+        ImageView Foto = findViewById(R.id.Bar_Foto);
 
-        Nombre.setText(TxtNombre.toString());
-        Direccion.setText(TxtDireccion.toString());
-        Barrio.setText(TxtBarrio.toString());
-        Telefono.setText(TxtTelefono.toString());
-        Descripcion.setText(TxtDescripcion.toString());
-        GlideApp.with(FichaBar.this).load(urlFoto).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(Foto);
+        Nombre.setText(TxtNombre);
+        Direccion.setText(TxtDireccion);
+        Barrio.setText(TxtBarrio);
+        Telefono.setText(TxtTelefono);
+        Descripcion.setText(TxtDescripcion);
+
+        FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
+        StorageReference storageRef = storage.getReference();
+        StorageReference pathReference = storageRef.child("bares-headers/"+urlFoto);
+
+
+
+        GlideApp.with(FichaBar.this).load(pathReference).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(Foto);
 
     }
 }

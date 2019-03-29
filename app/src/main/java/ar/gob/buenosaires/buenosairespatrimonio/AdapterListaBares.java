@@ -11,6 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.request.target.Target;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import java.util.ArrayList;
 
 public class AdapterListaBares extends BaseAdapter {
@@ -25,6 +29,7 @@ public class AdapterListaBares extends BaseAdapter {
     public TextView txtDireccion;
     public TextView txtBarrio;
     public ImageView imbFoto;
+
 
     @Override
     public boolean areAllItemsEnabled() {
@@ -77,7 +82,14 @@ public class AdapterListaBares extends BaseAdapter {
         txtNombre.setText(tempValues.getNombre());
         txtDireccion.setText(tempValues.getDireccion());
         txtBarrio.setText(tempValues.getBarrio());
-//        String Icon = tempValues.getFoto().toLowerCase();
+        String Icon = tempValues.getFoto().toLowerCase();
+
+        FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
+        StorageReference storageRef = storage.getReference();
+        StorageReference pathReference = storageRef.child("bares-thumbs/"+Icon+"_1.png");
+
+        GlideApp.with(activity).load(pathReference).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(imbFoto);
+
 //        imbFoto.setImageResource(activity.getResources().getIdentifier(Icon, "drawable", activity.getPackageName())
 //        );
         vi.setOnClickListener(new AdapterListaBares.MainClickListener(position));

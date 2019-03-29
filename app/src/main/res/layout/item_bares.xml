@@ -27,8 +27,7 @@
                 android:layout_marginBottom="2dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginTop="2dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ico_bares_round" />
+                android:layout_weight="1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
