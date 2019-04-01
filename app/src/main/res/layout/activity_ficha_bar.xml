@@ -32,27 +32,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bar_Nombre" />
 
-    <TextView
-        android:id="@+id/BarDireccion"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Dir-Barrio"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/open_sans"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bar_Foto" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/Bar_Foto">
 
-    <TextView
-        android:id="@+id/BarBarrio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/open_sans"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bar_Foto" />
+        <TextView
+            android:id="@+id/BarDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="3"
+            android:fontFamily="@font/open_sans"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bar_Foto" />
+
+        <TextView
+            android:id="@+id/BarBarrio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bar_Foto" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/BarTelefono"
@@ -63,17 +74,18 @@
         android:fontFamily="@font/open_sans"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BarBarrio" />
+        app:layout_constraintTop_toBottomOf="@+id/Dir-Barrio" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/mapView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BarTelefono">
 
@@ -90,15 +102,37 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.gms.maps.MapView
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:id="@+id/mapView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/arrow_down_float" />
 
 </android.support.constraint.ConstraintLayout>
