@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.Target;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -88,7 +89,13 @@ public class AdapterListaBares extends BaseAdapter {
         StorageReference storageRef = storage.getReference();
         StorageReference pathReference = storageRef.child("bares-thumbs/"+Icon+"_1.png");
 
-        GlideApp.with(activity).load(pathReference).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(imbFoto);
+        GlideApp.with(activity)
+                .load(pathReference)
+                .error(R.drawable.loading_thumb)
+                .thumbnail(GlideApp.with(activity).load(R.drawable.loading_thumb))
+                .diskCacheStrategy(DiskCacheStrategy.ALL) //using to load into cache then second time it will load fast.
+                .override(75, 75)
+                .into(imbFoto);
 
 //        imbFoto.setImageResource(activity.getResources().getIdentifier(Icon, "drawable", activity.getPackageName())
 //        );

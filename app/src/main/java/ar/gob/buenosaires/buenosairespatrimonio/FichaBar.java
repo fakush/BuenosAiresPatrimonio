@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.Target;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -43,16 +44,14 @@ public class FichaBar extends AppCompatActivity {
         StorageReference storageRef = storage.getReference();
         StorageReference pathReference = storageRef.child("bares-headers/"+urlFoto);
 
-//        Glide.with(context.getApplicationContext())
-//                .load(Your Path)   //passing your url to load image.
-//                .override(18, 18)  //just set override like this
-//                .error(R.drawable.placeholder)
-//                .listener(glide_callback)
-//                .animate(R.anim.rotate_backward)
-//                .centerCrop()
-//                .into(image.score);
-
-        GlideApp.with(FichaBar.this).load(pathReference).override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(Foto);
+        GlideApp.with(FichaBar.this)
+                .load(pathReference)
+                .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+                .error(R.drawable.loading_header)
+                .thumbnail(GlideApp.with(FichaBar.this).load(R.drawable.loading_header))
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .into(Foto);
 
     }
 }
