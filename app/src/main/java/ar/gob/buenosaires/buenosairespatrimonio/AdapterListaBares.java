@@ -32,6 +32,7 @@ public class AdapterListaBares extends BaseAdapter {
     public ImageView imbFoto;
 
 
+
     @Override
     public boolean areAllItemsEnabled() {
         return super.areAllItemsEnabled();

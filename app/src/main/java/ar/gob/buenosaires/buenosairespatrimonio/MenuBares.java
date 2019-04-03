@@ -46,6 +46,7 @@ public class MenuBares extends AppCompatActivity {
             sched.setTelefono(Separado[3]);
             sched.setDescripcion(Separado[4]);
             sched.setFoto(Separado[5]);
+            sched.setCoordenadas(Separado[6]);
             bares_array.add(sched);
         }
     }
@@ -60,6 +61,7 @@ public class MenuBares extends AppCompatActivity {
         myInt.putExtra("Telefono", tempValues.getTelefono().toString());
         myInt.putExtra("Descripcion", tempValues.getDescripcion().toString());
         myInt.putExtra("Foto", tempValues.getFoto().toString());
+        myInt.putExtra("Coordenadas", tempValues.getCoordenadas().toString());
         startActivity(myInt);
     }
 }
