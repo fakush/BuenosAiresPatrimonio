@@ -31,7 +31,6 @@ public class MenuBares extends AppCompatActivity {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Objects.requireNonNull(notificationManager).cancel(1);
 
-
     }
 
     // ListView

@@ -32,7 +32,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuMapas" />
         <activity android:name=".MenuMiradores" />
-        <activity android:name=".MenuBares" />
+        <activity android:name=".MenuBares">
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
         <activity android:name=".VrViewer" />
         <activity android:name=".Tiled_GPS_BuenosAires" />
         <activity android:name=".MenuGuia" />
