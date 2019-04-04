@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ListView list;
     AdapterMainActivity adapter;
     public ArrayList<Methods_Arrays> items_menu = new ArrayList<>();
+    public int backButtonCount = 0;
 
 
     @Override
@@ -60,5 +62,22 @@ public class MainActivity extends AppCompatActivity {
         myInt.putExtra("icono", tempValues.getIcono());
         myInt.putExtra("activity", tempValues.getActivity());
         startActivity(myInt);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if(backButtonCount >= 1)
+        {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else
+        {
+            Toast.makeText(this, "Presione ora vez para salir de la aplicación.", Toast.LENGTH_SHORT).show();
+            backButtonCount++;
+        }
     }
 }

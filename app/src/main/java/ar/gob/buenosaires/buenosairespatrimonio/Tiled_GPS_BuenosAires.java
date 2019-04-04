@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
@@ -54,6 +56,7 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
     //private static final String MAP1912_URL_FORMAT = "http://192.168.81.154/1866/%d/%d/%d.png";
     private String MAP1912_URL_FORMAT;
     private Integer Zmax, Zmin;
+    private Double LimiteN, LimiteE, LimiteS, LimiteO;
 
 
     @Override
@@ -66,6 +69,11 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
         DirInternet = Objects.requireNonNull(intent.getExtras()).getString("DirInternet");
         Zmax = Objects.requireNonNull(intent.getExtras()).getInt("zmax");
         Zmin = Objects.requireNonNull(intent.getExtras()).getInt("zmin");
+        LimiteN = Objects.requireNonNull(intent.getExtras()).getDouble("limiteN");
+        LimiteE = Objects.requireNonNull(intent.getExtras()).getDouble("limiteE");
+        LimiteS = Objects.requireNonNull(intent.getExtras()).getDouble("limiteS");
+        LimiteO = Objects.requireNonNull(intent.getExtras()).getDouble("limiteO");
+
 
         MAP1912_URL_FORMAT = DirInternet;
 
@@ -85,7 +93,7 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(
                 this, R.raw.style_json));
 
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.setOnMyLocationButtonClickListener(this);
         mMap.setOnMyLocationClickListener(this);
         enableMyLocation();
@@ -110,7 +118,11 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
         mUiSettings.setMapToolbarEnabled(true);
         mMap.setMaxZoomPreference(Zmin);
         mMap.setMinZoomPreference(Zmax);
+        LatLng BoundNE = new LatLng(LimiteN, LimiteE);
+        LatLng BoundSW = new LatLng(LimiteS, LimiteO);
+        LatLngBounds BoundBaires = new LatLngBounds(BoundSW ,BoundNE);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BAIRES, 16));
+        mMap.setLatLngBoundsForCameraTarget(BoundBaires);
         mTransparencyBar.setOnSeekBarChangeListener(this);
         mMap.setContentDescription("Mapa de Buenos Aires Antiguo.");
 //        KmlLayer layer;
@@ -164,7 +176,7 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
 
     @Override
     public boolean onMyLocationButtonClick() {
-        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Buscando mi posición", Toast.LENGTH_SHORT).show();
         // Return false so that we don't consume the event and the default behavior still occurs
         // (the camera animates to the user's current position).
         return false;

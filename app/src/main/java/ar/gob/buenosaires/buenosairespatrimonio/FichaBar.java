@@ -14,6 +14,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -79,10 +80,15 @@ public class FichaBar extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng BoundSW = new LatLng(-34.704639, -58.531333);
+        LatLng BoundNE = new LatLng(-34.534139,-58.337543);
+        LatLngBounds BoundBaires = new LatLngBounds(BoundSW ,BoundNE);
 
         LatLng baires = Coordenadas;
         mMap.addMarker(new MarkerOptions().position(baires).title(TituloMarker));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(baires, 15));
+        mMap.setLatLngBoundsForCameraTarget(BoundBaires);
+
     }
 
 }

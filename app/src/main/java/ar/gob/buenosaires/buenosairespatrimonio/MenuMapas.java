@@ -48,6 +48,10 @@ public class MenuMapas extends AppCompatActivity {
             sched.setBool(Integer.parseInt(Separado[5]));
             sched.setZoomMax(Integer.parseInt(Separado[6]));
             sched.setZoomMin(Integer.parseInt(Separado[7]));
+            sched.setLimiteN(Double.parseDouble(Separado[8]));
+            sched.setLimiteE(Double.parseDouble(Separado[9]));
+            sched.setLimiteS(Double.parseDouble(Separado[10]));
+            sched.setLimiteO(Double.parseDouble(Separado[11]));
             mapas_array.add(sched);
         }
     }
@@ -63,6 +67,10 @@ public class MenuMapas extends AppCompatActivity {
         myInt.putExtra("vrbool", tempValues.getBool());
         myInt.putExtra("zmax", tempValues.getZoomMax());
         myInt.putExtra("zmin", tempValues.getZoomMin());
+        myInt.putExtra("limiteN", tempValues.getLimiteN());
+        myInt.putExtra("limiteE", tempValues.getLimiteE());
+        myInt.putExtra("limiteS", tempValues.getLimiteS());
+        myInt.putExtra("limiteO", tempValues.getLimiteO());
 
         startActivity(myInt);
     }

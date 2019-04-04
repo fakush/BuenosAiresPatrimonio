@@ -5,8 +5,7 @@
         <item>Miradores de Buenos Aires; Visite los miradores de la ciudad de Buenos Aires atraves de la Realidad Virtual.; ic_miradores; MenuMiradores</item>
         <item>Bares Notables; Conozca los Bares Notables de la ciudad, y obtenga instrucciones para llegar a ellos.; ic_bares; MenuBares</item>
         <item>Guia Digital de Patrimonio; Consulte el buscador de edificios y sitios patrimoniales.; ic_guia; MenuGuia</item>
-        <item>Agenda; Conozca el calendario de eventos de la Gerencia Operativa de Patrimonio.; ic_agenda2; MenuAgenda</item>
-
+        <!-- <item>Agenda; Conozca el calendario de eventos de la Gerencia Operativa de Patrimonio.; ic_agenda2; MenuAgenda</item> -->
     </string-array>
 
     <string-array name="miradores_array">
@@ -21,34 +20,9 @@
     </string-array>
 
     <string-array name="mapas_array">
-        <item>1940; 1940 - Plano Catastro; ico_1940; Plano Catastral de la ciudad de Buenos Aires. Relevado durante la intendencia de Pedro Goyeneche.; http://sistema.mdm-auditores.com/mapas/1941/%d/%d/%d.png; 0; 8; 18</item>
-        <item>1912; 1912 - Plano Guia Peuser; ico_1912; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1912/%d/%d/%d.png; 0; 11; 16</item>
-        <item>1866; 1866 - Plano de la Ciudad de Buenos Aires; ico_1866; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1866/%d/%d/%d.png; 0; 11; 16</item>
-    </string-array>
-
-    <string-array name="bares_array">
-        <item>1866; 1866 - Plano de la Ciudad de Buenos Aires; ico_1866; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1866/%d/%d/%d.png; 0</item>
-        <item>1912; 1912 - Plano Guia Peuser; ico_1912; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1912/%d/%d/%d.png; 0</item>
-    </string-array>
-
-    <string-array name="marcadores_mapa">
-        <item>Casa de Gobierno Nacional (Casa Rosada); Balcarce 50; 1884 (unión de palacio de gobierno y edificio de correo); 1889; -34.60818; -58.37031</item>
-        <item>Plaza de Mayo; ; cual reforma?; ; -34.60836; -58.37221</item>
-        <item>Edificio La Prensa (Casa de la Cultura); Avenida de Mayo 575; 1892; 1898; -34.60823; -58.37447</item>
-        <item>Pasaje Roverano; Avenida de Mayo 560; 1878; ; -34.60878; -58.37432</item>
-        <item>Hotel Chile; Avenida de Mayo 1297; 1904; 1906; -34.60912; -58.38473</item>
-        <item>Hotel Majestic; Avenida de Mayo 1317; 1905; 1909; -34.60912; -58.3851</item>
-        <item>Palacio Barolo; Avenida de Mayo 1370; 1915; 1923; -34.60965; -58.38575</item>
-        <item>Edificio de la Inmobiliaria; Avenida de Mayo 1402/1500; 1908; 1910; -34.60953; -58.38633</item>
-        <item>Confitería del Molino; Avenida Rivadavia 1810; 1915; 1917; -34.60908; -58.39201</item>
-        <item>Plaza del Congreso; ; 1908; 1910; -34.60971; -58.39207</item>
-        <item>Monumento a los Dos Congresos; Plaza del Congreso; ; 1914; -34.60974; -58.39099</item>
-        <item>Palacio del Congreso Nacional; ; 1898; 1906; -34.60985; -58.39276</item>
-        <item>Estaciones de subterráneo Línea A; Entre estaciones Plaza de Mayo y Primera Junta; 1911; 1913; -34.6087; -58.3706</item>
-        <item>Palacio del Correo Central (CCK); Sarmiento 151; 1889; 1928; -34.60365; -58.36949</item>
-        <item>Edificio de la Aduana; Azopardo 350; 1909; 1910; -34.61178; -58.36744</item>
-        <item>Oficinas de Ajustes del Ferrocarril (Railway Building); Paseo Colón 350; 1907; 1910/1914; -34.61171; -58.3688</item>
-        <item>Monumento de Siria a la Argentina; Plaza República del Paraguay; ; ; -34.58911; -58.39839</item>
+        <item>1940; 1940 - Plano Catastro; ico_1940; Plano Catastral de la ciudad de Buenos Aires. Relevado durante la intendencia de Pedro Goyeneche.; http://sistema.mdm-auditores.com/mapas/1941/%d/%d/%d.png; 0; 11; 18; -34.534139; -58.337543; -34.704639; -58.531333</item>
+        <item>1912; 1912 - Plano Guia Peuser; ico_1912; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1912/%d/%d/%d.png; 0; 11; 16; -34.534139; -58.337543; -34.704639; -58.531333</item>
+        <item>1866; 1866 - Plano de la Ciudad de Buenos Aires; ico_1866; Indicando las lineas de Ferro-Carriles y Trenways en explotación y proyecto, segun documentos especiales suministrados por las Companias, levantado por el Ingeniero Don A. Aymez; http://sistema.mdm-auditores.com/mapas/1866/%d/%d/%d.png; 0; 12; 16;  -34.565735; -58.372354; -34.677531; -58.416850</item>
     </string-array>
 
 </resources>

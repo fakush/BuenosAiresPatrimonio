@@ -14,6 +14,10 @@ public class Methods_Arrays {
     private Integer VrType= 0;
     private Integer ZoomMax= 0;
     private Integer ZoomMin= 0;
+    private Double LimiteN= 0.0;
+    private Double LimiteE= 0.0;
+    private Double LimiteS= 0.0;
+    private Double LimiteO= 0.0;
 
     /*********** Set Methods ******************/
 
@@ -57,6 +61,10 @@ public class Methods_Arrays {
     public void setVrType(Integer VrType) {this.VrType = VrType; }
     public void setZoomMax(Integer ZoomMax) {this.ZoomMax = ZoomMax; }
     public void setZoomMin(Integer ZoomMin) {this.ZoomMin = ZoomMin; }
+    public void setLimiteN(Double LimiteN) {this.LimiteN= LimiteN; }
+    public void setLimiteE(Double LimiteE) {this.LimiteE= LimiteE; }
+    public void setLimiteS(Double LimiteS) {this.LimiteS= LimiteS; }
+    public void setLimiteO(Double LimiteO) {this.LimiteO= LimiteO; }
 
     /*********** Get Methods ****************/
 
@@ -100,5 +108,9 @@ public class Methods_Arrays {
     }
     public Integer getZoomMax() { return this.ZoomMax; }
     public Integer getZoomMin() { return this.ZoomMin; }
+    public Double getLimiteN() { return this.LimiteN; }
+    public Double getLimiteE() { return this.LimiteE; }
+    public Double getLimiteS() { return this.LimiteS; }
+    public Double getLimiteO() { return this.LimiteO; }
 
 }
