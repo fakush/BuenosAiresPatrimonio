@@ -14,6 +14,8 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FichaGuia"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -33,13 +35,14 @@
         <activity android:name=".MenuMapas" />
         <activity android:name=".MenuMiradores" />
         <activity android:name=".MenuBares">
-            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+
+            <!-- <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" /> -->
         </activity>
         <activity android:name=".VrViewer" />
         <activity android:name=".Tiled_GPS_BuenosAires" />
         <activity android:name=".MenuGuia" />
         <activity android:name=".MenuAgenda" />
-        <activity android:name=".FichaBar"></activity>
+        <activity android:name=".FichaBar" />
     </application>
 
 </manifest>
