@@ -51,18 +51,19 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
         String TxtFecha_de_Carga = intent.getExtras().getString("Fecha_de_Carga");
         String TxtImagenes = intent.getExtras().getString("Imagenes");
 
-        TextView Nombre = findViewById(R.id.Patrimonio_Nombre);
-        TextView Direccion = findViewById(R.id.Patrimonio_Direccion);
-        TextView Barrio = findViewById(R.id.Patrimonio_Barrio);
-        TextView Telefono = findViewById(R.id.Patrimonio_Telefono);
-        TextView Descripcion = findViewById(R.id.Patrimonio_Descripcion);
-        ImageView Foto = findViewById(R.id.Patrimonio_Foto);
+        TextView Tipo = findViewById(R.id.Tipo);
+        TextView Categoria = findViewById(R.id.Categoria);
+        TextView Denominacion = findViewById(R.id.Denominacion);
+        ImageView Foto = findViewById(R.id.Foto);
+        TextView Sistesis = findViewById(R.id.Sintesis);
+        TextView Contenido = findViewById(R.id.Contenido);
 
-        Nombre.setText(TxtNombre);
-        Direccion.setText(TxtDireccion);
-        Barrio.setText(TxtBarrio);
-        Telefono.setText(TxtTelefono);
-        Descripcion.setText(TxtDescripcion);
+
+        Tipo.setText(TxtTipo);
+        Categoria.setText(TxtCategoria);
+        Denominacion.setText(TxtDenominacion);
+        Sistesis.setText(TxtSintesis);
+        Contenido.setText(TxtContenido);
 
         FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
         StorageReference storageRef = storage.getReference();

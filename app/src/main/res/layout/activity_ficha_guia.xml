@@ -34,14 +34,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Tipo"
+                    android:textColor="@android:color/holo_red_dark" />
 
                 <TextView
                     android:id="@+id/Categoria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Categoria"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/holo_blue_dark" />
 
             </LinearLayout>
 
@@ -49,25 +52,176 @@
                 android:id="@+id/Denominacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Denominacion"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/Foto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bar_sur" />
 
             <TextView
+                android:id="@+id/TituloSintesis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Síntesis"
+                android:textStyle="bold"
+                tools:text="Síntesis" />
+
+            <TextView
                 android:id="@+id/Sintesis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sistensis" />
+
+            <TextView
+                android:id="@+id/TituloContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contenido"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Contenido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Contenido" />
+
+            <TextView
+                android:id="@+id/TituloAnio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Años"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/anios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="anios" />
+
+            <TextView
+                android:id="@+id/TituloAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Autor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Titulo_FO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Función Original"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Titulo_FA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Función Actual"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/FO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="txt" />
+
+                <TextView
+                    android:id="@+id/FA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="txt"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Titulo_PN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Protección Nacional"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Protección_Municipal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Protección Municipal"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/PN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="txt" />
+
+                <TextView
+                    android:id="@+id/PM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="txt"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Titulo_FechadeCarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Carga: "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/FechadeCarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FechadeCarga" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
