@@ -19,6 +19,7 @@ public class Method_Patrimonios {
     private String Proteccion_Municipal ="";
     private String Fecha_de_Carga ="";
     private String Imagenes ="";
+    //private String Coordenadas="";
 
     public String getNumero() {
         return this.Numero;
@@ -133,16 +134,23 @@ public class Method_Patrimonios {
     }
 
     public String getFecha_de_Carga() {
-        return Fecha_de_Carga;
+        return this.Fecha_de_Carga;
     }
     public void setFecha_de_Carga(String fecha_de_Carga) {
         this.Fecha_de_Carga = fecha_de_Carga;
     }
 
     public String getImagenes() {
-        return Imagenes;
+        return this.Imagenes;
     }
     public void setImagenes(String imagenes) {
         this.Imagenes = imagenes;
     }
+
+    //public String getCoordenadas() {
+    //    return this.Coordenadas;
+    //}
+    //public void setCoordenadas(String coordenadas) {
+    //    this.Coordenadas = coordenadas;
+    //}
 }

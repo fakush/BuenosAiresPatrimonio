@@ -54,13 +54,13 @@ public class MenuBares extends AppCompatActivity {
     {
         Method_Bares tempValues = (Method_Bares) bares_array.get(mPosition);
         Intent myInt = new Intent(this, FichaBar.class);
-        myInt.putExtra("Nombre", tempValues.getNombre().toString());
-        myInt.putExtra("Direccion", tempValues.getDireccion().toString());
-        myInt.putExtra("Barrio", tempValues.getBarrio().toString());
-        myInt.putExtra("Telefono", tempValues.getTelefono().toString());
-        myInt.putExtra("Descripcion", tempValues.getDescripcion().toString());
-        myInt.putExtra("Foto", tempValues.getFoto().toString());
-        myInt.putExtra("Coordenadas", tempValues.getCoordenadas().toString());
+        myInt.putExtra("Bar_Nombre", tempValues.getNombre().toString());
+        myInt.putExtra("Bar_Direccion", tempValues.getDireccion().toString());
+        myInt.putExtra("Bar_Barrio", tempValues.getBarrio().toString());
+        myInt.putExtra("Bar_Telefono", tempValues.getTelefono().toString());
+        myInt.putExtra("Bar_Descripcion", tempValues.getDescripcion().toString());
+        myInt.putExtra("Bar_Foto", tempValues.getFoto().toString());
+        myInt.putExtra("Bar_Coordenadas", tempValues.getCoordenadas().toString());
         startActivity(myInt);
     }
 }

@@ -21,9 +21,9 @@ import com.google.firebase.storage.StorageReference;
 
 public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
-    private String TituloMarker;
-    private LatLng Coordenadas;
+    private GoogleMap mMapaGuia;
+    private String PatrimonioMarker;
+    private LatLng Coordenadas, CoordsDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,41 +32,56 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
         setContentView(R.layout.activity_ficha_guia);
 
         Intent intent = getIntent();
-        String TxtNumero = intent.getExtras().getString("Numero");
-        String TxtTipo = intent.getExtras().getString("Tipo");
-        String TxtCategoria = intent.getExtras().getString("Categoria");
-        String TxtDenominacion = intent.getExtras().getString("Denominacion");
-        String TxtLocalizacion = intent.getExtras().getString("Localizacion");
-        String TxtBarrio = intent.getExtras().getString("Barrio");
-        String TxtDireccion_Mapa = intent.getExtras().getString("Direccion_Mapa");
-        String TxtContenido = intent.getExtras().getString("Contenido");
-        String TxtSintesis = intent.getExtras().getString("Sintesis");
-        String TxtAnios = intent.getExtras().getString("Anios");
-        String TxtEpoca = intent.getExtras().getString("Epoca");
-        String TxtAutor = intent.getExtras().getString("Autor");
-        String TxtFuncion_Original = intent.getExtras().getString("Funcion_Original");
-        String TxtFuncion_Actual = intent.getExtras().getString("Funcion_Actual");
-        String TxtProteccion_Nacional = intent.getExtras().getString("Proteccion_Nacional");
-        String TxtProteccion_Municipal = intent.getExtras().getString("Proteccion_Municipal");
-        String TxtFecha_de_Carga = intent.getExtras().getString("Fecha_de_Carga");
-        String TxtImagenes = intent.getExtras().getString("Imagenes");
+        String TxtNumero = intent.getExtras().getString("Patrimonio_Numero");
+        String TxtTipo = intent.getExtras().getString("Patrimonio_Tipo");
+        String TxtCategoria = intent.getExtras().getString("Patrimonio_Categoria");
+        String TxtDenominacion = intent.getExtras().getString("Patrimonio_Denominacion");
+        String TxtLocalizacion = intent.getExtras().getString("Patrimonio_Localizacion");
+        String TxtBarrio = intent.getExtras().getString("Patrimonio_Barrio");
+        String TxtDireccion_Mapa = intent.getExtras().getString("Patrimonio_Direccion_Mapa");
+        String TxtContenido = intent.getExtras().getString("Patrimonio_Contenido");
+        String TxtSintesis = intent.getExtras().getString("Patrimonio_Sintesis");
+        String TxtAnios = intent.getExtras().getString("Patrimonio_Anios");
+        String TxtEpoca = intent.getExtras().getString("Patrimonio_Epoca");
+        String TxtAutor = intent.getExtras().getString("Patrimonio_Autor");
+        String TxtFuncion_Original = intent.getExtras().getString("Patrimonio_Funcion_Original");
+        String TxtFuncion_Actual = intent.getExtras().getString("Patrimonio_Funcion_Actual");
+        String TxtProteccion_Nacional = intent.getExtras().getString("Patrimonio_Proteccion_Nacional");
+        String TxtProteccion_Municipal = intent.getExtras().getString("Patrimonio_Proteccion_Municipal");
+        String TxtFecha_de_Carga = intent.getExtras().getString("Patrimonio_Fecha_de_Carga");
+        String TxtImagenes = intent.getExtras().getString("Patrimonio_Imagenes");
+        //String TxtCoordenadas = intent.getExtras().getString("Patrimonio_Coordenadas");
 
-        TextView Tipo = findViewById(R.id.Tipo);
-        TextView Categoria = findViewById(R.id.Categoria);
-        TextView Denominacion = findViewById(R.id.Denominacion);
-        ImageView Foto = findViewById(R.id.Foto);
-        TextView Sistesis = findViewById(R.id.Sintesis);
-        TextView Contenido = findViewById(R.id.Contenido);
-
+        TextView Tipo = findViewById(R.id.Ficha_Patrimonio_Tipo);
+        TextView Categoria = findViewById(R.id.Ficha_Patrimonio_Categoria);
+        TextView Denominacion = findViewById(R.id.Ficha_Patrimonio_Denominacion);
+        ImageView Foto = findViewById(R.id.FotoFichaPatrimonio);
+        TextView Sistesis = findViewById(R.id.Ficha_Patrimonio_Sintesis);
+        TextView Contenido = findViewById(R.id.Ficha_Patrimonio_Contenido);
+        TextView Anios = findViewById(R.id.Ficha_Patrimonio_anios);
+        TextView Autor = findViewById(R.id.Ficha_Patrimonio_Autor);
+        TextView FO = findViewById(R.id.Ficha_Patrimonio_FO);
+        TextView FA = findViewById(R.id.Ficha_Patrimonio_FA);
+        TextView PN = findViewById(R.id.Ficha_Patrimonio_PN);
+        TextView PM = findViewById(R.id.Ficha_Patrimonio_PM);
+        TextView FechaDeCarga = findViewById(R.id.Ficha_Patrimonio_FechadeCarga);
 
         Tipo.setText(TxtTipo);
         Categoria.setText(TxtCategoria);
         Denominacion.setText(TxtDenominacion);
         Sistesis.setText(TxtSintesis);
         Contenido.setText(TxtContenido);
+        Anios.setText(TxtAnios);
+        Autor.setText(TxtAutor);
+        FO.setText(TxtFuncion_Original);
+        FA.setText(TxtFuncion_Actual);
+        PN.setText(TxtProteccion_Nacional);
+        PM.setText(TxtProteccion_Municipal);
+        FechaDeCarga.setText(TxtFecha_de_Carga);
 
         FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
         StorageReference storageRef = storage.getReference();
+        String urlFoto = TxtImagenes+"_2.png";
         StorageReference pathReference = storageRef.child("patrimonio-headers/"+urlFoto);
 
         GlideApp.with(FichaGuia.this)
@@ -78,27 +93,28 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
                 .into(Foto);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.mapView2);
+                .findFragmentById(R.id.MapGuia);
         mapFragment.getMapAsync(this);
 
-        TituloMarker = TxtNombre;
-        String[] latlong =  TxtCoordenadas.split(",");
-        double latitude = Double.parseDouble(latlong[0]);
-        double longitude = Double.parseDouble(latlong[1]);
-        Coordenadas = new LatLng(latitude, longitude);
+        PatrimonioMarker = TxtDenominacion;
+        //String[] latlong =  TxtCoordenadas.split(",");
+        //double latitude = Double.parseDouble(latlong[0]);
+        //double longitude = Double.parseDouble(latlong[1]);
+        //Coordenadas = new LatLng(latitude, longitude);
+        CoordsDemo = new LatLng(-34.608409, -58.372164);
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+    public void onMapReady(GoogleMap GuiaMap) {
+        mMapaGuia = GuiaMap;
         LatLng BoundSW = new LatLng(-34.704639, -58.531333);
         LatLng BoundNE = new LatLng(-34.534139,-58.337543);
-        LatLngBounds BoundBaires = new LatLngBounds(BoundSW ,BoundNE);
+        LatLngBounds BoundPatrimonioBaires = new LatLngBounds(BoundSW ,BoundNE);
 
-        LatLng baires = Coordenadas;
-        mMap.addMarker(new MarkerOptions().position(baires).title(TituloMarker));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(baires, 15));
-        mMap.setLatLngBoundsForCameraTarget(BoundBaires);
+        LatLng PatrimonioBaires = CoordsDemo;
+        mMapaGuia.addMarker(new MarkerOptions().position(PatrimonioBaires).title(PatrimonioMarker));
+        mMapaGuia.moveCamera(CameraUpdateFactory.newLatLngZoom(PatrimonioBaires, 15));
+        mMapaGuia.setLatLngBoundsForCameraTarget(BoundPatrimonioBaires);
 
     }
 }

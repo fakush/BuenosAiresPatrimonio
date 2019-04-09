@@ -14,7 +14,6 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FichaGuia"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -26,7 +25,6 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,7 +33,6 @@
         <activity android:name=".MenuMapas" />
         <activity android:name=".MenuMiradores" />
         <activity android:name=".MenuBares">
-
             <!-- <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" /> -->
         </activity>
         <activity android:name=".VrViewer" />
@@ -43,6 +40,8 @@
         <activity android:name=".MenuGuia" />
         <activity android:name=".MenuAgenda" />
         <activity android:name=".FichaBar" />
+        <activity android:name=".FichaGuia"/>
+
     </application>
 
 </manifest>

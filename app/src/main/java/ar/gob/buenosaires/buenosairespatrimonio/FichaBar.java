@@ -32,13 +32,13 @@ public class FichaBar extends AppCompatActivity implements OnMapReadyCallback {
         setContentView(R.layout.activity_ficha_bar);
 
         Intent intent = getIntent();
-        String TxtNombre = intent.getExtras().getString("Nombre");
-        String TxtDireccion = intent.getExtras().getString("Direccion");
-        String TxtBarrio = intent.getExtras().getString("Barrio");
-        String TxtTelefono = intent.getExtras().getString("Telefono");
-        String TxtDescripcion = intent.getExtras().getString("Descripcion");
-        String urlFoto = intent.getExtras().getString("Foto")+"_2.png";
-        String TxtCoordenadas = intent.getExtras().getString("Coordenadas");
+        String TxtNombre = intent.getExtras().getString("Bar_Nombre");
+        String TxtDireccion = intent.getExtras().getString("Bar_Direccion");
+        String TxtBarrio = intent.getExtras().getString("Bar_Barrio");
+        String TxtTelefono = intent.getExtras().getString("Bar_Telefono");
+        String TxtDescripcion = intent.getExtras().getString("Bar_Descripcion");
+        String urlFoto = intent.getExtras().getString("Bar_Foto")+"_2.png";
+        String TxtCoordenadas = intent.getExtras().getString("Bar_Coordenadas");
 
 
         TextView Nombre = findViewById(R.id.Bar_Nombre);
@@ -78,8 +78,8 @@ public class FichaBar extends AppCompatActivity implements OnMapReadyCallback {
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+    public void onMapReady(GoogleMap BarMap) {
+        mMap = BarMap;
         LatLng BoundSW = new LatLng(-34.704639, -58.531333);
         LatLng BoundNE = new LatLng(-34.534139,-58.337543);
         LatLngBounds BoundBaires = new LatLngBounds(BoundSW ,BoundNE);
