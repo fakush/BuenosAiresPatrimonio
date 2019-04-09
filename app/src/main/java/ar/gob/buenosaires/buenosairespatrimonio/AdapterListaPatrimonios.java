@@ -87,7 +87,7 @@ public class AdapterListaPatrimonios extends BaseAdapter {
 
         FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
         StorageReference storageRef = storage.getReference();
-        StorageReference pathReference = storageRef.child("patrimonios-thumbs/"+Icon+"-1.png");
+        StorageReference pathReference = storageRef.child("patrimonio-thumbs/"+Icon+"-1.png");
 
         GlideApp.with(activity)
                 .load(pathReference)

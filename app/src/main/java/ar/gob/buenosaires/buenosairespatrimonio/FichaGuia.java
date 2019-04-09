@@ -81,7 +81,7 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
 
         FirebaseStorage storage  = FirebaseStorage.getInstance("gs://bsaspatrimonio.appspot.com");
         StorageReference storageRef = storage.getReference();
-        String urlFoto = TxtImagenes+"_2.png";
+        String urlFoto = TxtImagenes+"-2.png";
         StorageReference pathReference = storageRef.child("patrimonio-headers/"+urlFoto);
 
         GlideApp.with(FichaGuia.this)

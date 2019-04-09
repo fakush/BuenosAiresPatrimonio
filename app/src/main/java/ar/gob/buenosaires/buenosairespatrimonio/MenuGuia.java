@@ -71,7 +71,7 @@ public class MenuGuia extends AppCompatActivity {
     public void onItemClick(int mPosition)
     {
         Method_Patrimonios tempValues = (Method_Patrimonios) patrimonios_array.get(mPosition);
-        Intent myInt = new Intent(this, FichaBar.class);
+        Intent myInt = new Intent(this, FichaGuia.class);
         myInt.putExtra("Patrimonio_Numero", tempValues.getNumero().toString());
         myInt.putExtra("Patrimonio_Tipo", tempValues.getTipo().toString());
         myInt.putExtra("Patrimonio_Categoría", tempValues.getCategoria().toString());

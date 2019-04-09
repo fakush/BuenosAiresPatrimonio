@@ -9,7 +9,7 @@
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -59,7 +59,8 @@
             <ImageView
                 android:id="@+id/FotoFichaPatrimonio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
 
             <TextView
                 android:id="@+id/TituloSintesis"
@@ -93,26 +94,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Años"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/Ficha_Patrimonio_anios"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="anios" />
+                android:text="anios"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/TituloAutor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Autor"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/Ficha_Patrimonio_Autor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Autor" />
+                android:text="Autor"
+                android:textSize="12sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,7 +130,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Función Original"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/Titulo_FA"
@@ -134,7 +140,8 @@
                     android:layout_weight="1"
                     android:text="Función Actual"
                     android:textAlignment="textEnd"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -147,7 +154,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="txt" />
+                    android:text="txt"
+                    android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/Ficha_Patrimonio_FA"
@@ -155,7 +163,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="txt"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="12sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -169,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Protección Nacional"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -178,6 +188,7 @@
                     android:layout_weight="1"
                     android:text="Protección Municipal"
                     android:textAlignment="textEnd"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -191,7 +202,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="txt" />
+                    android:text="txt"
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/Ficha_Patrimonio_PM"
@@ -199,7 +211,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="txt"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -212,13 +225,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fecha de Carga: "
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/Ficha_Patrimonio_FechadeCarga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FechadeCarga" />
+                    android:text="FechadeCarga"
+                    android:textSize="12sp"/>
 
             </LinearLayout>
 
