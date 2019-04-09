@@ -23,7 +23,7 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMapaGuia;
     private String PatrimonioMarker;
-    private LatLng Coordenadas, CoordsDemo;
+    private LatLng CoordenadasPat, CoordsDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
         String TxtNumero = intent.getExtras().getString("Patrimonio_Numero");
         String TxtTipo = intent.getExtras().getString("Patrimonio_Tipo");
         String TxtCategoria = intent.getExtras().getString("Patrimonio_Categoria");
-        String TxtDenominacion = intent.getExtras().getString("Patrimonio_Denominacion");
+        String TxtDenominacionPat = intent.getExtras().getString("Patrimonio_Denominacion");
         String TxtLocalizacion = intent.getExtras().getString("Patrimonio_Localizacion");
         String TxtBarrio = intent.getExtras().getString("Patrimonio_Barrio");
         String TxtDireccion_Mapa = intent.getExtras().getString("Patrimonio_Direccion_Mapa");
@@ -50,7 +50,7 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
         String TxtProteccion_Municipal = intent.getExtras().getString("Patrimonio_Proteccion_Municipal");
         String TxtFecha_de_Carga = intent.getExtras().getString("Patrimonio_Fecha_de_Carga");
         String TxtImagenes = intent.getExtras().getString("Patrimonio_Imagenes");
-        //String TxtCoordenadas = intent.getExtras().getString("Patrimonio_Coordenadas");
+        String TxtCoordenadasPat = intent.getExtras().getString("Patrimonio_Coordenadas");
 
         TextView Tipo = findViewById(R.id.Ficha_Patrimonio_Tipo);
         TextView Categoria = findViewById(R.id.Ficha_Patrimonio_Categoria);
@@ -68,7 +68,7 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
 
         Tipo.setText(TxtTipo);
         Categoria.setText(TxtCategoria);
-        Denominacion.setText(TxtDenominacion);
+        Denominacion.setText(TxtDenominacionPat);
         Sistesis.setText(TxtSintesis);
         Contenido.setText(TxtContenido);
         Anios.setText(TxtAnios);
@@ -92,26 +92,26 @@ public class FichaGuia extends AppCompatActivity implements OnMapReadyCallback {
                 .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
                 .into(Foto);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        SupportMapFragment mapFragmentPat = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.MapGuia);
-        mapFragment.getMapAsync(this);
+        mapFragmentPat.getMapAsync(this);
 
-        PatrimonioMarker = TxtDenominacion;
-        //String[] latlong =  TxtCoordenadas.split(",");
-        //double latitude = Double.parseDouble(latlong[0]);
-        //double longitude = Double.parseDouble(latlong[1]);
-        //Coordenadas = new LatLng(latitude, longitude);
+        PatrimonioMarker = TxtDenominacionPat;
+        String[] latlongPat =  TxtCoordenadasPat.split(",");
+        double latitudePat = Double.parseDouble(latlongPat[0]);
+        double longitudePat = Double.parseDouble(latlongPat[1]);
+        CoordenadasPat = new LatLng(latitudePat, longitudePat);
         CoordsDemo = new LatLng(-34.608409, -58.372164);
     }
 
     @Override
     public void onMapReady(GoogleMap GuiaMap) {
         mMapaGuia = GuiaMap;
-        LatLng BoundSW = new LatLng(-34.704639, -58.531333);
-        LatLng BoundNE = new LatLng(-34.534139,-58.337543);
-        LatLngBounds BoundPatrimonioBaires = new LatLngBounds(BoundSW ,BoundNE);
+        LatLng BoundSWPat = new LatLng(-34.704639, -58.531333);
+        LatLng BoundNEPat = new LatLng(-34.534139,-58.337543);
+        LatLngBounds BoundPatrimonioBaires = new LatLngBounds(BoundSWPat ,BoundNEPat);
 
-        LatLng PatrimonioBaires = CoordsDemo;
+        LatLng PatrimonioBaires = CoordenadasPat;
         mMapaGuia.addMarker(new MarkerOptions().position(PatrimonioBaires).title(PatrimonioMarker));
         mMapaGuia.moveCamera(CameraUpdateFactory.newLatLngZoom(PatrimonioBaires, 15));
         mMapaGuia.setLatLngBoundsForCameraTarget(BoundPatrimonioBaires);

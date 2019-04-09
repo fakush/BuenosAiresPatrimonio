@@ -19,7 +19,7 @@ public class Method_Patrimonios {
     private String Proteccion_Municipal ="";
     private String Fecha_de_Carga ="";
     private String Imagenes ="";
-    //private String Coordenadas="";
+    private String CoordenadasPat="";
 
     public String getNumero() {
         return this.Numero;
@@ -147,10 +147,7 @@ public class Method_Patrimonios {
         this.Imagenes = imagenes;
     }
 
-    //public String getCoordenadas() {
-    //    return this.Coordenadas;
-    //}
-    //public void setCoordenadas(String coordenadas) {
-    //    this.Coordenadas = coordenadas;
-    //}
+    public String getCoordenadasPat() {return this.CoordenadasPat;}
+    public void setCoordenadasPat(String coordenadasPat) {this.CoordenadasPat = coordenadasPat;}
+
 }

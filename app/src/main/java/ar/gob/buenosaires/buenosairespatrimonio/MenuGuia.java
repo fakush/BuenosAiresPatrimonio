@@ -63,7 +63,7 @@ public class MenuGuia extends AppCompatActivity {
             sched.setProteccion_Municipal(Separado[15]);
             sched.setFecha_de_Carga(Separado[16]);
             sched.setImagenes(Separado[17]);
-//            sched.setCoordenadas(Separado[18]);
+            sched.setCoordenadasPat(Separado[18]);
             patrimonios_array.add(sched);
         }
     }
@@ -90,7 +90,7 @@ public class MenuGuia extends AppCompatActivity {
         myInt.putExtra("Patrimonio_Proteccion_Municipal", tempValues.getProteccion_Municipal().toString());
         myInt.putExtra("Patrimonio_Fecha_de_Carga", tempValues.getFecha_de_Carga().toString());
         myInt.putExtra("Patrimonio_Imagenes", tempValues.getImagenes().toString());
-//        myInt.putExtra("Patrimonio_Coordenadas", tempValues.getCoordenadas().toString());
+        myInt.putExtra("Patrimonio_Coordenadas", tempValues.getCoordenadasPat().toString());
         startActivity(myInt);
     }
 }
