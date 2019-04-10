@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="items_menu">
-        <item>GPS Histórico; Recorra la ciudad a través usando nuestro GPS de planos antiguos.; ic_gps; MenuMapas</item>
-        <item>Miradores de Buenos Aires; Visite los miradores de la ciudad de Buenos Aires atraves de la Realidad Virtual.; ic_miradores; MenuMiradores</item>
-        <item>Bares Notables; Conozca los Bares Notables de la ciudad, y obtenga instrucciones para llegar a ellos.; ic_bares; MenuBares</item>
-        <item>Guia Digital de Patrimonio; Consulte el buscador de edificios y sitios patrimoniales.; ic_guia; MenuGuia</item>
+        <item>GPS Histórico; Recorra la ciudad a través usando nuestro GPS de planos antiguos.; new_gps; MenuMapas</item>
+        <item>Miradores de Buenos Aires; Visite los miradores de la ciudad de Buenos Aires atraves de la Realidad Virtual.; new_miradores; MenuMiradores</item>
+        <item>Bares Notables; Conozca los Bares Notables de la ciudad, y obtenga instrucciones para llegar a ellos.; new_bares; MenuBares</item>
+        <item>Guia Digital de Patrimonio; Consulte el buscador de edificios y sitios patrimoniales.; new_patrimonio; MenuGuia</item>
         <!-- <item>Agenda; Conozca el calendario de eventos de la Gerencia Operativa de Patrimonio.; ic_agenda2; MenuAgenda</item> -->
     </string-array>
 

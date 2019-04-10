@@ -74,7 +74,7 @@ public class MenuGuia extends AppCompatActivity {
         Intent myInt = new Intent(this, FichaGuia.class);
         myInt.putExtra("Patrimonio_Numero", tempValues.getNumero().toString());
         myInt.putExtra("Patrimonio_Tipo", tempValues.getTipo().toString());
-        myInt.putExtra("Patrimonio_Categoría", tempValues.getCategoria().toString());
+        myInt.putExtra("Patrimonio_Categoria", tempValues.getCategoria().toString());
         myInt.putExtra("Patrimonio_Denominacion", tempValues.getDenominacion().toString());
         myInt.putExtra("Patrimonio_Localizacion", tempValues.getLocalizacion().toString());
         myInt.putExtra("Patrimonio_Barrio", tempValues.getBarrio().toString());

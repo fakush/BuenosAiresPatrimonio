@@ -92,7 +92,7 @@ public class AdapterListaPatrimonios extends BaseAdapter {
         GlideApp.with(activity)
                 .load(pathReference)
                 .error(R.drawable.loading_thumb)
-                .thumbnail(GlideApp.with(activity).load(R.drawable.loading_thumb))
+                .thumbnail(GlideApp.with(activity).load(R.drawable.cargado_thumb))
                 .diskCacheStrategy(DiskCacheStrategy.ALL) //using to load into cache then second time it will load fast.
                 .override(75, 75)
                 .into(imbIcono);
