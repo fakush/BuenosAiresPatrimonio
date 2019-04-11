@@ -61,7 +61,7 @@ public class FichaBar extends AppCompatActivity implements OnMapReadyCallback {
         GlideApp.with(FichaBar.this)
                 .load(pathReference)
                 .error(R.drawable.loading_header)
-                .thumbnail(GlideApp.with(FichaBar.this).load(R.drawable.cargado_header))
+                .thumbnail(GlideApp.with(FichaBar.this).load(R.drawable.cargado_header2))
                 .diskCacheStrategy(DiskCacheStrategy.ALL) //using to load into cache then second time it will load fast.
                 .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
                 .into(Foto);

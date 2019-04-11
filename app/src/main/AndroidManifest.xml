@@ -12,7 +12,8 @@
         android:icon="@mipmap/logop_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logop_round_launcher"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
+        android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">
 
         <meta-data

@@ -74,7 +74,6 @@ public class Tiled_GPS_BuenosAires extends AppCompatActivity implements
         LimiteS = Objects.requireNonNull(intent.getExtras()).getDouble("limiteS");
         LimiteO = Objects.requireNonNull(intent.getExtras()).getDouble("limiteO");
 
-
         MAP1912_URL_FORMAT = DirInternet;
 
         mTransparencyBar = (SeekBar) findViewById(R.id.transparencySeekBar);

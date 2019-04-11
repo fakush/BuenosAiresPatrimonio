@@ -5,6 +5,8 @@ import android.content.res.AssetManager;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,9 +46,27 @@ public class VrViewer extends AppCompatActivity {
 
         mVRPanoramaView = (VrPanoramaView) findViewById(R.id.vrPanoramaView);
 
+
         setVrType();
 
         loadPhotoSphere();
+
+
+        mVRPanoramaView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int action = motionEvent.getAction();
+                switch (action & MotionEvent.ACTION_MASK){
+                    case MotionEvent.ACTION_DOWN:{
+                        mVRPanoramaView.setPureTouchTracking(true);
+                    }
+                    case MotionEvent.ACTION_UP:{
+                        mVRPanoramaView.setPureTouchTracking(false);
+                    }
+                }
+                return false;
+            }
+        });
 
         Toast.makeText(VrViewer.this,
                 "Mové el celular a la altura de tus ojos, para ver la vista del mirador.", Toast.LENGTH_LONG).show();
@@ -77,6 +97,8 @@ public class VrViewer extends AppCompatActivity {
         }
 
     }
+
+
 
     @Override
     protected void onPause() {
