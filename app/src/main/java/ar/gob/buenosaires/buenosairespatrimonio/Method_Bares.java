@@ -9,6 +9,17 @@ public class Method_Bares {
     private String Foto ="";
     private String Coordenadas ="";
 
+//    public Method_Bares (String Nombre, String Direccion, String Barrio, String Telefono, String Descripcion, String Foto, String Coordenadas) {
+//        super();
+//        this.Nombre = Nombre;
+//        this.Direccion = Direccion;
+//        this.Barrio = Barrio;
+//        this.Telefono = Telefono;
+//        this.Descripcion = Descripcion;
+//        this.Foto = Foto;
+//        this.Coordenadas = Coordenadas;
+//    }
+
     public void setNombre(String Nombre) {this.Nombre = Nombre;}
     public void setDireccion(String Direccion) {this.Direccion = Direccion;}
     public void setBarrio(String Barrio) {this.Barrio = Barrio;}

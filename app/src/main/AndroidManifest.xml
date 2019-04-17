@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logop_launcher"
@@ -32,11 +33,16 @@
         <activity android:name=".WelcomeScreen" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MenuMapas" />
-        <activity android:name=".MenuMiradores" />
+        <activity android:name=".MenuMiradores">
+            <!--<category android:name="com.google.intent.category.DAYDREAM" />-->
+            <!--<category android:name="com.google.intent.category.CARDBOARD" />-->
+        </activity>
         <activity android:name=".MenuBares">
             <!-- <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" /> -->
         </activity>
-        <activity android:name=".VrViewer" />
+        <activity android:name=".VrViewer">
+            <!--<category android:name="com.google.intent.category.CARDBOARD" />-->
+        </activity>
         <activity android:name=".Tiled_GPS_BuenosAires" />
         <activity android:name=".MenuGuia" />
         <activity android:name=".MenuAgenda" />

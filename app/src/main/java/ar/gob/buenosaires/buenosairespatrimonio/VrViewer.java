@@ -46,27 +46,29 @@ public class VrViewer extends AppCompatActivity {
 
         mVRPanoramaView = (VrPanoramaView) findViewById(R.id.vrPanoramaView);
 
+        mVRPanoramaView.setTouchTrackingEnabled(true);
+        mVRPanoramaView.setInfoButtonEnabled(false);
+        mVRPanoramaView.setClickable(true);
 
         setVrType();
 
         loadPhotoSphere();
 
 
-        mVRPanoramaView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                final int action = motionEvent.getAction();
-                switch (action & MotionEvent.ACTION_MASK){
-                    case MotionEvent.ACTION_DOWN:{
-                        mVRPanoramaView.setPureTouchTracking(true);
-                    }
-                    case MotionEvent.ACTION_UP:{
-                        mVRPanoramaView.setPureTouchTracking(false);
-                    }
-                }
-                return false;
-            }
-        });
+//        mVRPanoramaView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()){
+//                    case MotionEvent.ACTION_DOWN:{
+//                        mVRPanoramaView.setPureTouchTracking(true);
+//                    }
+//                    case MotionEvent.ACTION_UP:{
+//                        mVRPanoramaView.setPureTouchTracking(false);
+//                    }
+//                }
+//                return false;
+//            }
+//        });
 
         Toast.makeText(VrViewer.this,
                 "Mové el celular a la altura de tus ojos, para ver la vista del mirador.", Toast.LENGTH_LONG).show();

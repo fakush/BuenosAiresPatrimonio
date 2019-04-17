@@ -8,7 +8,7 @@
     <string name="txt_ejemplo">Ejemplo</string>
     <string name="MenuMapas_Titulo">Elegir mapa para navegar:</string>
     <string name="felchas">flechas_menu</string>
-    <string name="MenuBares_Titulo">Elegir un Bar de la lista:</string>
+    <string name="MenuBares_Titulo">Buscar o elegir un Bar de la lista:</string>
     <string name="VrViewer_Tilulo">Titulo Mirador</string>
     <string name="VrViewer_Info">Informacion del Mirador</string>
     <string name="Mapa_Transparencia">Transparencia del Mapa</string>
